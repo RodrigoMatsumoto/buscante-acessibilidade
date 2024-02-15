@@ -19,10 +19,12 @@
   }
   @if (livrosEncontrados$ | async; as listaLivros) {
     <section
+      aria-label="Resultados da busca"
       class="resultados">
         {{ livrosResultado.totalItems }} resultados encontrados
     </section>
     <ul
+      aria-label="Lista de livros encontrados"
       class="container-card">
       @for (livro of listaLivros; track livro.title) {
         <li>
@@ -32,6 +34,7 @@
     </ul>
   } @else {
     <section
+      aria-label="Página inicial"
       class="imagens">
       <h1 class="titulo">Busque o livro <br> que quiser na <br> nossa estante!</h1>
       <img
